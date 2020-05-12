@@ -61,7 +61,7 @@ public class BootReceiver extends BroadcastReceiver implements Utils {
         }
 
         int gain = Settings.Secure.getInt(context.getContentResolver(),
-                DeviceSettings.PREF_HEADPHONE_GAIN, 2);
+                DeviceSettings.PREF_HEADPHONE_GAIN, 0);
         FileUtils.setValue(HEADPHONE_GAIN_PATH, gain + " " + gain);
         FileUtils.setValue(MIC_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_MIC_GAIN, 0));
